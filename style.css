@@ -1,0 +1,58 @@
+:root {
+  --mycustom-color: #3498db;
+}
+
+.mycontainercustom {
+  width: 100px;
+  height: 100px;
+  background-color: var(--mycustom-color);
+  transition: width 2s ease-out 1s;
+}
+
+.mycontainercustom:hover {
+  width: 200px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  transition: transform 0.25s ease-out;
+}
+.item:hover {
+  cursor: pointer;
+  transform: perspective(200px) translateZ(10px);
+}
+.item:nth-of-type(even) {
+  background-color: blueviolet;
+}
+.item:nth-of-type(odd) {
+  background-color: rgb(43, 226, 76);
+}
+@media screen and (min-width: 600px) {
+  .container {
+    flex-direction: row;
+  }
+}
+.imgtst {
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 250px;
+  border-radius: 10px;
+  transition: transform 0.5s ease-out;
+}
+.imgtst:hover {
+  border-radius: 10px;
+  /* transform: perspective(200px) translateZ(5px); */
+  transform: scale(1.04);
+  cursor: pointer;
+}
+.imgcontainer {
+  border-radius: 10px;
+}
