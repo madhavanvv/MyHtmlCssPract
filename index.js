@@ -1,17 +1,15 @@
-async function myTot() {
-  console.log("before--1");
-  const user = await getUser(1);
-  console.log(user);
-  console.log("after---3");
-}
+//transform: translateX(100px);
 
-function getUser(id) {
-  return new Promise((res, rej) => {
+const items = document.querySelectorAll(".item");
+const circle = document.querySelector(".circle");
+items.forEach((item) => {
+  item.addEventListener("click", () => {
+    circle.style = "transform:rotate(180deg)";
+    //circle.style = "transform: translateX(100px)";
+    //console.log(circle);
+
     setTimeout(() => {
-      console.log("middle--2");
-      //return { id: id, gitUsername: "venu" };
-    }, 2000);
+      circle.style = "transform:rotate(0deg)";
+    }, 3000);
   });
-}
-
-myTot();
+});

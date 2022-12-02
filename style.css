@@ -1,58 +1,60 @@
+* {
+  margin: 0;
+}
+
 :root {
-  --mycustom-color: #3498db;
+  --primary-color: rgb(232, 82, 82);
+  --secondary-color: rgb(51, 51, 217);
+  --myback-color: rgb(162, 212, 233);
 }
-
-.mycontainercustom {
-  width: 100px;
-  height: 100px;
-  background-color: var(--mycustom-color);
-  transition: width 2s ease-out 1s;
-}
-
-.mycontainercustom:hover {
-  width: 200px;
-}
-
 .container {
+  width: 100vw;
+  background-color: var(--myback-color);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 20px;
 }
 
 .item {
   width: 100px;
   height: 100px;
+  background-color: var(--primary-color);
   border-radius: 10px;
-  transition: transform 0.25s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-out;
 }
+
 .item:hover {
   cursor: pointer;
-  transform: perspective(200px) translateZ(10px);
+  transform: perspective(100px) translateZ(10px);
 }
-.item:nth-of-type(even) {
-  background-color: blueviolet;
+
+.scroll-item {
+  margin-top: 50px;
+  background-color: rgb(225, 141, 242);
+  width: 100vw;
+  height: 100px;
 }
-.item:nth-of-type(odd) {
-  background-color: rgb(43, 226, 76);
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  transition: transform 2s ease-in;
 }
+.line-let {
+  width: 10px;
+  height: 100%;
+  background-color: rgb(34, 34, 34);
+  transform: translateX(47px);
+}
+
 @media screen and (min-width: 600px) {
   .container {
     flex-direction: row;
   }
-}
-.imgtst {
-  margin-top: 50px;
-  margin-left: 50px;
-  width: 250px;
-  border-radius: 10px;
-  transition: transform 0.5s ease-out;
-}
-.imgtst:hover {
-  border-radius: 10px;
-  /* transform: perspective(200px) translateZ(5px); */
-  transform: scale(1.04);
-  cursor: pointer;
-}
-.imgcontainer {
-  border-radius: 10px;
 }
